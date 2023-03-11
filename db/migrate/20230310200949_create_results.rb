@@ -3,8 +3,8 @@ class CreateResults < ActiveRecord::Migration[7.0]
     create_table :results do |t|
       t.integer :WBC
       t.integer :RBC
-      t.integer :haemogloblin
-      t.integer :haematocrit
+      t.integer :hemogloblin
+      t.integer :hematocrit
       t.integer :platelates
       t.integer :sodium
       t.integer :potassium
