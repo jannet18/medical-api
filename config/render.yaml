@@ -1,20 +1,21 @@
 ipAllowList: []
 
 services:
- - type: web
- name: rails
- env: ruby
- buildCommand: "./bin/render-build.sh"
- startCommand: bundle exec rails s
- envVars:
- - key: RAILS_MASTER_KEY
- sync: false
- - key: DATABASE_URL
- fromDATABASE:
- name: postgres
- property: connectionString
- - type: postgresSQL
- name: postgresSQL
- isAllowList: []
- plan: free
- maxmemoryPolicy: noeviction
+- type: web
+  name: rails
+  env: ruby
+  buildCommand: "./bin/render-build.sh"
+  startCommand: bundle exec rails s
+  envVars:
+- key: RAILS_MASTER_KEY
+  sync: false
+- key: DATABASE_URL
+  fromDATABASE:
+  name: postgres
+  property: connectionString
+- type: postgresSQL
+  name: postgresSQL
+  isAllowList: []
+  plan: free
+  
+  maxmemoryPolicy: noeviction
