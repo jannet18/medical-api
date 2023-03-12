@@ -1,4 +1,4 @@
-databases:
+database:
   - name: postgres
     ipAllowList: []
 
@@ -15,6 +15,6 @@ services:
         fromDATABASE:
           name: postgres
           property: connectionString
-          isAllowList: []
+          ipAllowList: []
           plan: free
           maxmemoryPolicy: noeviction
