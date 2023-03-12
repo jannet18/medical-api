@@ -15,7 +15,6 @@ services:
         fromDATABASE:
           name: postgres
           property: connectionString
-  
-    isAllowList: []
-    plan: free
-    maxmemoryPolicy: noeviction
+          isAllowList: []
+          plan: free
+          maxmemoryPolicy: noeviction
