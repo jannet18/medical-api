@@ -1,6 +1,6 @@
 class PatientsController < ApplicationController
     skip_before_action :is_doc, only: [:create]
-    skip_before_action :authorize, only [:create]
+    skip_before_action :authorize, only: [:create]
 
     def index
         render json: Patient.all.order(:namme), status: :ok

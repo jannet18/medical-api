@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     def doclogin
         user = Doctor.find_by(email: params[:email])
         if user&.authenticate(params[:password])
-            sessions[;current_user] = user.id
+            sessions[:current_user] = user.id
             render json: user, status: :ok
         else
             render json: { error: ["invalid email and/or password"] }, status: :unauthorized

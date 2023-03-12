@@ -36,7 +36,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_10_200949) do
     t.string "title"
     t.string "name"
     t.string "bio"
-    t.integer "department_id", null: false
+    t.integer "department_id"
     t.string "email"
     t.string "password_digest"
     t.string "image_url"
@@ -60,9 +60,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_10_200949) do
   create_table "results", force: :cascade do |t|
     t.integer "WBC"
     t.integer "RBC"
-    t.integer "haemogloblin"
-    t.integer "haematocrit"
-    t.integer "platelates"
+    t.integer "hemoglobin"
+    t.integer "hematocrit"
+    t.integer "platelets"
     t.integer "sodium"
     t.integer "potassium"
     t.integer "bun"
@@ -76,6 +76,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_10_200949) do
 
   add_foreign_key "appointments", "doctors"
   add_foreign_key "appointments", "patients"
-  add_foreign_key "doctors", "departments"
   add_foreign_key "results", "patients"
 end

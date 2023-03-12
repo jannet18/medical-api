@@ -1,9 +1,9 @@
-class DoctorsController < ApplicationController*
+class DoctorsController < ApplicationController
     skip_before_action :authorize
     skip_before_action :is_doc
 
-    def Index
-        render json: Doactor.all, status: :ok
+    def index
+        render json: Doctor.all, status: :ok
     end
 
     def show

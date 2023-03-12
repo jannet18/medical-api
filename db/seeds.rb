@@ -60,8 +60,8 @@ puts 'Seeding appointments..'
     patient_id: rand(1..Patient.all.size),
     title: Faker::Movie.title,
     location: Faker::Movies::LordOfTheRings.location,
-    startDate: DateTime.new(2022,6,rand(1..30),rand(1..19),rand(1.60)),
-    endDate: DateTime.new(2022,6,rand(1..30),rand(6..19),rand(1.60)),
+    start_date: DateTime.new(2022,6,rand(1..30),rand(1..19),rand(1.60)),
+    end_date: DateTime.new(2022,6,rand(1..30),rand(6..19),rand(1.60)),
     notes: Faker::Fantasy::Tolkien.poem
   )
 end
