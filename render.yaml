@@ -15,8 +15,8 @@ services:
         fromDATABASE:
           name: postgres
           property: connectionString
-  - type: postgresql
-    name: postgresql
+  - type: redis
+    name: redis
     isAllowList: []
     plan: free
     maxmemoryPolicy: noeviction
