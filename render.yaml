@@ -1,5 +1,5 @@
 database:
-  -name: postgres
+  - name: postgres
   ipAllowList: []
 
 services:
@@ -9,15 +9,14 @@ services:
     buildCommand: "./bin/render-build.sh"
     startCommand: bundle exec rails s
     envVars:
-  - key: RAILS_MASTER_KEY
-    sync: false
-  - key: DATABASE_URL
-    fromDATABASE:
-    name: postgres
-    property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
+      - key: DATABASE_URL
+        fromDATABASE:
+          name: postgres
+          property: connectionString
   - type: postgresSQL
     name: postgresSQL
     isAllowList: []
     plan: free
-
     maxmemoryPolicy: noeviction
