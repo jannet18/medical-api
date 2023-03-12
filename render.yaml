@@ -8,13 +8,13 @@ services:
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: bundle exec rails s
-    envVars:
-      - key: RAILS_MASTER_KEY
-        sync: false
-      - key: DATABASE_URL
-        fromDATABASE:
-          name: postgres
-          property: connectionString
-          ipAllowList: []
-          plan: free
-          maxmemoryPolicy: noeviction
+envVars:
+  - key: RAILS_MASTER_KEY
+    sync: false
+  - key: DATABASE_URL
+    fromDATABASE:
+      name: postgres
+      property: connectionString
+      ipAllowList: []
+      plan: free
+      maxmemoryPolicy: noeviction
