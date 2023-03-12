@@ -1,4 +1,4 @@
-DATABASE:
+databases:
   - name: postgres
     ipAllowList: []
 
